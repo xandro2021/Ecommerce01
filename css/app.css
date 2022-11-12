@@ -1,0 +1,382 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1REM = 10px */
+}
+
+*, *::before *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/* GLOBALES */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 0px 0px 5rem 0px;
+}
+
+h1{
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 3rem;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0px auto;
+}
+
+img{
+    max-width: 100%;
+    /* width: 100%; */
+    /* min-width: 100%; */
+    display: block;
+}
+
+.btn {
+    background-color: #8cbc00;
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #769c02;
+}
+
+/* UTILIDADES */
+.text-center {
+    text-align: center;
+}
+
+.max-width-30 {
+    max-width: 30rem;
+}
+
+/* HEADER Y NAVEGACION */
+.nombre-sitio{
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.nombre-sitio span{
+    color: #037bc0;
+}
+
+.contenedor-navegacion{
+    border-top: 0.1rem #e1e1e1 solid;
+}
+
+.nav-principal{
+    padding: 2rem 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero {
+    background-image: url("../img/principal.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 55rem;
+}
+
+/* CATEGORIAS */
+.categorias{
+    padding-top: 5rem;
+}
+.categorias h2{
+    text-align: center;
+}
+
+.categoria a{
+    text-align: center;
+    display: block;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.categoria a:hover{
+    background-color: #037bc0;
+    color: #fff;
+    border-bottom-right-radius: 1rem;
+}
+
+.listado-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* SOBRE NOSOTROS */
+.sobre-nosotros{
+    /* background-image: linear-gradient(to right, #000 50%, red 100%); */
+    background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, #037bc0 100%), url("../img/nosotros.jpg");
+    background-position: left center;
+    padding: 10rem 0;
+    background-repeat: no-repeat;
+    background-size: 100%, 128rem; /* Gradient,Imagen */
+}
+
+/* USANDO GRID */
+/* .sobre-nosotros-grid{ */
+/*     display: grid; */
+/*     grid-template-columns: repeat(2, 1fr); */
+/*     column-gap: 8rem; */
+/* } */
+
+/* .texto-nosotros{ */
+/*     grid-column: 2 / 3; */
+/* } */
+
+.sobre-nosotros-grid{
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 10rem;
+}
+
+.texto-nosotros{
+    flex-basis: 50%;
+    color: #fff;
+}
+
+/* LISTADO DE PRODUCTOS */
+/* NUESTRO PRODUCTOS */
+
+.contenido-principal {
+    padding-top: 5rem;
+}
+
+.listado-productos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 2rem;
+    grid-row-gap: 2rem;
+}
+
+.producto:nth-child(1){
+    grid-column: 1 / 7;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.producto:nth-child(1) img {
+    height: 54rem; /* 43rem */
+    /* height: 43rem; */
+    width: 100%;
+    object-fit: cover;
+}
+
+.producto:nth-child(2){
+    grid-column: 1 / 4;
+}
+
+.producto:nth-child(2) img,
+.producto:nth-child(3) img {
+    height: 33rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.producto:nth-child(3){
+    grid-column: 4 / 7;
+}
+
+.producto:nth-child(4){
+    grid-column: 1 / 3;
+}
+
+.producto:nth-child(5){
+    grid-column: 3 / 5;
+}
+
+.producto:nth-child(6){
+    grid-column: 5 / 7;
+}
+
+.producto {
+    background-color: #037bc0;
+}
+
+.texto-producto {
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+}
+
+.texto-producto h3 {
+    margin: 0px;
+}
+
+.texto-producto h3 {
+    margin: 0px 0px 0.5rem 0px;
+}
+
+.texto-producto .precio {
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+
+/* FOOTER */
+.site-footer {
+    border-top: 1px #e1e1e1 solid;
+    margin-top: 5rem;
+    padding-top: 5rem;
+}
+
+.site-footer h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* usando flex */
+/* .grid-footer { */
+/*     display: flex; */
+/*     gap: 2rem; */
+/* } */
+
+/* .grid-footer div { */
+/*     flex: 1; */
+/* } */
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+
+.footer-menu a {
+    display: block;
+}
+
+.copyright {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+/* PAGINA NUEVA SOBRE NOSOTROS */
+/* NOSOTROS */
+.contenido-nosotros {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(auto-fit, minmax( 25rem, 1fr ));
+    column-gap: 4rem;
+}
+
+.informacion-nosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* PAGINA NUEVA SOBRE BLOG */
+/* BLOG */
+
+.contenedor-blog {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+}
+
+.entrada {
+    border-bottom: 2px #e1e1e1 solid;
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
+}
+
+.entrada:last-of-type {
+    border: none;
+}
+
+.entrada-meta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.entrada-meta p {
+    font-weight: 700;
+}
+
+.entrada-meta span {
+    color: #037bc0;
+}
+
+.contenido-entrada-blog {
+    width: 60rem;
+    margin: 0px auto;
+}
+
+.galeria {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.galeria img {
+    height: 40rem;
+    width: 40rem;
+    object-fit: cover;
+}
+
+/* FORMULARIO */
+.formulario {
+    max-width: 60rem;
+    margin: 0px auto;
+}
+
+.formulario fieldset {
+    border: 1px #000 solid;
+    margin-bottom: 2rem;
+}
+
+.formulario legend {
+    background-color: #005485;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    margin-bottom: 4rem;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo label{
+    flex-basis: 10rem;
+}
+
+.campo select,
+.campo textarea,
+.campo input:not([type="radio"]) {
+    flex: 1;
+    border: 1px #e1e1e1 solid;
+    padding: 1rem;
+}
